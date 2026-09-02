@@ -1,46 +1,29 @@
 [gd_scene format=3 uid="uid://dy8gm8sejh60u"]
 
 [ext_resource type="Script" uid="uid://cd0dnp1k4wefu" path="res://control.gd" id="1_fulp8"]
-[ext_resource type="Script" uid="uid://4pq1g4rkm5jr" path="res://button.gd" id="2_5tis2"]
 
 [node name="Main Scene" type="Node2D" unique_id=745475230]
 
-[node name="Control" type="Control" parent="." unique_id=1216033451]
+[node name="Control" type="Control" parent="." unique_id=1849454832]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 70.0
+offset_bottom = 70.0
 script = ExtResource("1_fulp8")
 
-[node name="Button" type="Button" parent="Control" unique_id=1888850248]
+[node name="Button" type="Button" parent="Control" unique_id=1647740198]
 layout_mode = 0
-offset_left = 299.0
-offset_top = 504.0
-offset_right = 610.0
-offset_bottom = 606.0
-text = "Click Here!"
-script = ExtResource("2_5tis2")
+offset_left = 227.0
+offset_top = 506.0
+offset_right = 677.0
+offset_bottom = 591.0
 
-[node name="Button2" type="Button" parent="Control" unique_id=605853334]
+[node name="Button2" type="Button" parent="Control" unique_id=625576403]
 layout_mode = 0
-offset_left = 1114.0
-offset_top = 504.0
-offset_right = 1425.0
-offset_bottom = 606.0
-text = "Click Here!"
-script = ExtResource("2_5tis2")
-
-[node name="Button2" type="Button" parent="Control" unique_id=746086991]
-layout_mode = 0
-offset_left = 1002.0
-offset_top = 509.0
-offset_right = 1313.0
+offset_left = 1237.0
+offset_top = 526.0
+offset_right = 1687.0
 offset_bottom = 611.0
-text = "Click Here!"
-script = ExtResource("2_5tis2")
 
 [connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Button2" to="Control" method="_on_button_2_pressed"]
-[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]
-[connection signal="pressed" from="Control/Button2" to="Control" method="_on_button_2_pressed"]
-[connection signal="pressed" from="Control/Button2" to="Control" method="_on_button_pressed"]
