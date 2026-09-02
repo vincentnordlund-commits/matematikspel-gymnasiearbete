@@ -14,10 +14,10 @@ script = ExtResource("1_fulp8")
 
 [node name="Button" type="Button" parent="Control" unique_id=1888850248]
 layout_mode = 0
-offset_left = 377.0
-offset_top = 235.0
-offset_right = 688.0
-offset_bottom = 337.0
+offset_left = 446.0
+offset_top = 512.0
+offset_right = 757.0
+offset_bottom = 614.0
 text = "Click Here!"
 script = ExtResource("2_5tis2")
 
