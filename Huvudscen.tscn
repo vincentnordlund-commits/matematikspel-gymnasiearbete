@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dy8gm8sejh60u"]
+
+[ext_resource type="Script" uid="uid://cd0dnp1k4wefu" path="res://control.gd" id="1_fulp8"]
+[ext_resource type="Script" uid="uid://4pq1g4rkm5jr" path="res://button.gd" id="2_5tis2"]
+
+[node name="Main Scene" type="Node2D" unique_id=745475230]
+
+[node name="Control" type="Control" parent="." unique_id=1216033451]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fulp8")
+
+[node name="Button" type="Button" parent="Control" unique_id=1888850248]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 235.0
+offset_right = 688.0
+offset_bottom = 337.0
+text = "Click Here!"
+script = ExtResource("2_5tis2")
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]
