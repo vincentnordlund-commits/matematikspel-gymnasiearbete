@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b2g44de23ayt5"]
 
 [ext_resource type="Script" uid="uid://dqjvpb1u0lugl" path="res://Scripts/start.gd" id="1_3bxa3"]
+[ext_resource type="Texture2D" uid="uid://ca2dnwjw8aj28" path="res://Assets/icon.svg" id="2_r48yj"]
 
 [node name="Start" type="Control" unique_id=399754423]
 layout_mode = 3
@@ -11,22 +12,29 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3bxa3")
 
-[node name="OptionButton" type="OptionButton" parent="." unique_id=751423339]
+[node name="Spel 1" type="TextureButton" parent="." unique_id=1261577175]
 layout_mode = 0
 offset_left = 349.0
 offset_top = 495.0
-offset_right = 682.0
-offset_bottom = 615.0
-item_count = 1
-popup/item_0/text = "Tung"
-popup/item_0/id = 0
+offset_right = 477.0
+offset_bottom = 623.0
+texture_normal = ExtResource("2_r48yj")
 
-[node name="OptionButton2" type="OptionButton" parent="." unique_id=1219555731]
+[node name="Spel 3" type="TextureButton" parent="Spel 1" unique_id=1066499083]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 170.0
+offset_right = 120.0
+offset_bottom = 298.0
+texture_normal = ExtResource("2_r48yj")
+
+[node name="Spel 2" type="TextureButton" parent="." unique_id=286185106]
 layout_mode = 0
 offset_left = 1180.0
 offset_top = 500.0
-offset_right = 1513.0
-offset_bottom = 620.0
+offset_right = 1308.0
+offset_bottom = 628.0
+texture_normal = ExtResource("2_r48yj")
 
 [node name="Label" type="Label" parent="." unique_id=447723307]
 layout_mode = 0
@@ -37,4 +45,4 @@ offset_bottom = 342.0
 theme_override_font_sizes/font_size = 150
 text = "Sigma boy"
 
-[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="Spel 1" to="." method="_on_spel_1_pressed"]
