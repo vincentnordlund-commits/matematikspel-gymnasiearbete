@@ -21,6 +21,7 @@ offset_bottom = 623.0
 texture_normal = ExtResource("2_r48yj")
 
 [node name="Spel 3" type="TextureButton" parent="Spel 1" unique_id=1066499083]
+visible = false
 layout_mode = 0
 offset_left = -8.0
 offset_top = 170.0
