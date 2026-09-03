@@ -29,6 +29,15 @@ offset_right = 120.0
 offset_bottom = 298.0
 texture_normal = ExtResource("2_r48yj")
 
+[node name="Spel 4" type="TextureButton" parent="Spel 1" unique_id=164827259]
+visible = false
+layout_mode = 0
+offset_left = -10.0
+offset_top = 360.0
+offset_right = 118.0
+offset_bottom = 488.0
+texture_normal = ExtResource("2_r48yj")
+
 [node name="Spel 2" type="TextureButton" parent="." unique_id=286185106]
 layout_mode = 0
 offset_left = 1180.0
