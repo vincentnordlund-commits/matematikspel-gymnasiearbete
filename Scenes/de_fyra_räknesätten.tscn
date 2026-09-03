@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://ivvijctcg6wt"]
-
-[node name="De Fyra Räknesätten" type="Node2D" unique_id=934803333]
-
-[node name="Button" type="Button" parent="." unique_id=2061991683]
-offset_left = 227.0
-offset_top = 506.0
-offset_right = 677.0
-offset_bottom = 591.0
