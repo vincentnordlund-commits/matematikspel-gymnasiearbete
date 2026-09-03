@@ -56,3 +56,4 @@ theme_override_font_sizes/font_size = 150
 text = "Sigma boy"
 
 [connection signal="pressed" from="Spel 1" to="." method="_on_spel_1_pressed"]
+[connection signal="pressed" from="Spel 1/Spel 3" to="." method="_on_spel_3_pressed"]

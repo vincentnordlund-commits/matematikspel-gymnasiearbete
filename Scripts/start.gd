@@ -9,3 +9,9 @@ func _on_spel_1_pressed() -> void:
 	else:
 		$"Spel 1/Spel 3".hide()
 		$"Spel 1/Spel 4".hide()
+		
+
+
+
+func _on_spel_3_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/de_fyra_räknesätten.tscn")
