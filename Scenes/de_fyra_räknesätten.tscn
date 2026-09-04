@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cdhpucpsr35w6"]
 
 [ext_resource type="Script" uid="uid://cyslilxhwbptr" path="res://Scripts/de_fyra_räknesätten.gd" id="1_cioob"]
+[ext_resource type="PackedScene" uid="uid://uyw75xsixexp" path="res://Scenes/FX/rättsvar.tscn" id="2_pn5i1"]
 
 [node name="De Fyra Räknesätten" type="Control" unique_id=778268852]
 layout_mode = 3
@@ -27,5 +28,10 @@ offset_left = 667.0
 offset_top = 678.0
 offset_right = 1335.88
 offset_bottom = 810.68
+
+[node name="FX" type="Node" parent="." unique_id=1671043367]
+
+[node name="Rättsvar" parent="FX" unique_id=893778818 instance=ExtResource("2_pn5i1")]
+position = Vector2(1000, 534)
 
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
