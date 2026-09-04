@@ -1,7 +1,46 @@
 [gd_scene format=3 uid="uid://b2g44de23ayt5"]
 
 [ext_resource type="Script" uid="uid://dqjvpb1u0lugl" path="res://Scripts/start.gd" id="1_3bxa3"]
+[ext_resource type="Script" uid="uid://c3g6va6c72pwl" path="res://Scenes/color_rect.gd" id="2_5ogh5"]
 [ext_resource type="Texture2D" uid="uid://ca2dnwjw8aj28" path="res://Assets/icon.svg" id="2_r48yj"]
+
+[sub_resource type="Animation" id="Animation_r48yj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.997117, 0.5751809, 0.689226, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5ogh5"]
+resource_name = "background"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 3.8333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.997117, 0.5751809, 0.689226, 1), Color(0.99285585, 0.43281487, 0.60682666, 1), Color(0.997117, 0.5751809, 0.689226, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lb6bl"]
+_data = {
+&"RESET": SubResource("Animation_r48yj"),
+&"background": SubResource("Animation_5ogh5")
+}
 
 [node name="Start" type="Control" unique_id=399754423]
 layout_mode = 3
@@ -11,6 +50,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3bxa3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1928308584]
+libraries/ = SubResource("AnimationLibrary_lb6bl")
+autoplay = &"background"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1727483900]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.997117, 0.5751809, 0.689226, 1)
+script = ExtResource("2_5ogh5")
 
 [node name="Spel 1" type="TextureButton" parent="." unique_id=1261577175]
 layout_mode = 0
