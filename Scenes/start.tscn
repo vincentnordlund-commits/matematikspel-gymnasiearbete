@@ -64,10 +64,10 @@ script = ExtResource("2_5ogh5")
 
 [node name="Spel 1" type="TextureButton" parent="." unique_id=1261577175]
 layout_mode = 0
-offset_left = 349.0
-offset_top = 495.0
-offset_right = 477.0
-offset_bottom = 623.0
+offset_left = 550.0
+offset_top = 500.0
+offset_right = 678.0
+offset_bottom = 628.0
 texture_normal = ExtResource("2_r48yj")
 
 [node name="Spel 3" type="TextureButton" parent="Spel 1" unique_id=1066499083]
@@ -98,10 +98,10 @@ texture_normal = ExtResource("2_r48yj")
 
 [node name="Label" type="Label" parent="." unique_id=447723307]
 layout_mode = 0
-offset_left = 548.0
-offset_top = 137.0
-offset_right = 1290.0
-offset_bottom = 342.0
+offset_left = 572.0
+offset_top = 136.0
+offset_right = 1314.0
+offset_bottom = 341.0
 theme_override_font_sizes/font_size = 150
 text = "Sigma boy"
 
