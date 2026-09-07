@@ -14,4 +14,4 @@ func _on_spel_1_pressed() -> void:
 
 
 func _on_spel_3_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/de_fyra_räknesätten.tscn")
+	get_tree().change_scene_to_file("res://Scenes/de_fyra_räknesätten_lätt.tscn")
