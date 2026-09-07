@@ -3,6 +3,8 @@ extends Control
 @onready var label: Label = $Label
 @onready var line_edit: LineEdit = $LineEdit
 @onready var rättsvar: Sprite2D = $FX/Rättsvar
+@onready var felsvar: Sprite2D = $FX/felsvar
+
 
 var rng = RandomNumberGenerator.new()
 
@@ -30,9 +32,10 @@ func new_question() -> void:
 func _on_line_edit_text_submitted(answer: String) -> void:
 	if int(answer) == number1 + number2:
 		print("Correct")
-		rättsvar.playFX1()
+		rättsvar.playFXrätt()
 	else:
 		print("Wrong")
+		felsvar.playFXfel()
 
 	line_edit.clear()
 	new_question()
