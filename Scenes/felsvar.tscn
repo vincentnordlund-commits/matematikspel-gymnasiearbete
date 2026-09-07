@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ddtfvmwld55n8"]
+
+[ext_resource type="Texture2D" uid="uid://dm17l5cj8edek" path="res://Assets/ant.jpg" id="1_74nqv"]
+[ext_resource type="Script" uid="uid://c2gweurjml0dg" path="res://Scripts/FX/felsvar.gd" id="2_7unis"]
+
+[sub_resource type="Animation" id="Animation_frucu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_j7bhx"]
+resource_name = "felsvar"
+length = 2.9666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pkknx"]
+_data = {
+&"RESET": SubResource("Animation_frucu"),
+&"felsvar": SubResource("Animation_j7bhx")
+}
+
+[node name="felsvar" type="Sprite2D" unique_id=642629145]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("1_74nqv")
+script = ExtResource("2_7unis")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=297013269]
+libraries/ = SubResource("AnimationLibrary_pkknx")
