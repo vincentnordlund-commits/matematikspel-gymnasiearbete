@@ -8,34 +8,84 @@ extends Control
 
 var rng = RandomNumberGenerator.new()
 
+var fråga: int
+
 var number1: int
 var number2: int
 
 func _ready() -> void:
 	
-	new_question()
+	_random_fråga()
 	line_edit.grab_focus()
 	
 
-func new_question() -> void:
+func _random_fråga() -> void:
+	var choices: Array[Callable] = [
+		addition, 
+		subtraktion,
+		multiplikation
+	]
+	
+	var chosen_function: Callable = choices.pick_random()
+	
+	chosen_function.call()
+
+func addition() -> void:
 	
 	number1 = int(randi_range(0, 100))
 	
 	number2 = int(randi_range(0, 100))
 	
 	label.text = "%d + %d?" % [number1, number2]
+	
+	fråga = 1
+
+func subtraktion() -> void:
+	
+	number1 = int(randi_range(0, 100))
+	
+	number2 = int(randi_range(0, number1))
+	
+	label.text = "%d - %d?" % [number1, number2]
+	
+	fråga = 2
+
+func multiplikation() -> void:
+	number1 = int(randi_range(0, 10))
+	
+	number2 = int(randi_range(0, 10))
+	
+	label.text = "%d × %d?" % [number1, number2]
+	
+	fråga = 3
 
 
 # Called when the node enters the scene tree for the first time.
 
 
 func _on_line_edit_text_submitted(answer: String) -> void:
-	if int(answer) == number1 + number2:
-		print("Correct")
-		rättsvar.playFXrätt()
+	if int(fråga) == 1:
+		if int(answer) == number1 + number2:
+			print("Correct")
+			rättsvar.playFXrätt()
+		else:
+			print("Wrong")
+			felsvar.playFXfel()
+	elif int(fråga) == 2:
+		if int(answer) == number1 - number2:
+			print("Correct")
+			rättsvar.playFXrätt()
+		else:
+			print("Wrong")
+			felsvar.playFXfel()
 	else:
-		print("Wrong")
-		felsvar.playFXfel()
+		if int(answer) == number1 * number2:
+			print("Correct")
+			rättsvar.playFXrätt()
+		else:
+			print("Wrong")
+			felsvar.playFXfel()
+	
 
 	line_edit.clear()
-	new_question()
+	_random_fråga()
