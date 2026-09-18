@@ -21,9 +21,8 @@ func _ready() -> void:
 
 func _random_fråga() -> void:
 	var choices: Array[Callable] = [
-		addition, 
-		subtraktion,
-		multiplikation
+
+		division
 	]
 	
 	var chosen_function: Callable = choices.pick_random()
@@ -59,6 +58,17 @@ func multiplikation() -> void:
 	
 	fråga = 3
 
+func division() -> void:
+	number2 = int(randi_range(1, 10))
+	
+	var answer = int(randi_range(1, 10))
+	
+	number1 = number2 * answer
+	
+	label.text = "%d / %d?" % [number1, number2]
+	
+	fråga = 4
+	
 
 # Called when the node enters the scene tree for the first time.
 
@@ -71,6 +81,7 @@ func _on_line_edit_text_submitted(answer: String) -> void:
 		else:
 			print("Wrong")
 			felsvar.playFXfel()
+
 	elif int(fråga) == 2:
 		if int(answer) == number1 - number2:
 			print("Correct")
@@ -78,8 +89,17 @@ func _on_line_edit_text_submitted(answer: String) -> void:
 		else:
 			print("Wrong")
 			felsvar.playFXfel()
-	else:
+
+	elif int(fråga) == 3:
 		if int(answer) == number1 * number2:
+			print("Correct")
+			rättsvar.playFXrätt()
+		else:
+			print("Wrong")
+			felsvar.playFXfel()
+
+	else:
+		if int(answer) == number1 / number2:
 			print("Correct")
 			rättsvar.playFXrätt()
 		else:
