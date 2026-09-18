@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dqxqxdl40boll"]
+
+[ext_resource type="Script" uid="uid://cyslilxhwbptr" path="res://Scripts/de_fyra_räknesätten.gd" id="1_cioob"]
+[ext_resource type="PackedScene" uid="uid://uyw75xsixexp" path="res://Scenes/FX/rättsvar.tscn" id="2_pn5i1"]
+[ext_resource type="PackedScene" uid="uid://ddtfvmwld55n8" path="res://Scenes/felsvar.tscn" id="3_cd53m"]
+
+[node name="De Fyra Räknesätten" type="Control" unique_id=778268852]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cioob")
+
+[node name="Label" type="Label" parent="." unique_id=1468490731]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 38.0
+offset_right = 1512.0
+offset_bottom = 303.0
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=547441540]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.036000002
+anchor_bottom = 0.029000001
+offset_left = 667.0
+offset_top = 678.0
+offset_right = 1335.88
+offset_bottom = 810.68
+
+[node name="FX" type="Node" parent="." unique_id=1671043367]
+
+[node name="felsvar" parent="FX" unique_id=642629145 instance=ExtResource("3_cd53m")]
+position = Vector2(1031, 545)
+scale = Vector2(0.66481483, 0.74415404)
+
+[node name="Rättsvar" parent="FX" unique_id=893778818 instance=ExtResource("2_pn5i1")]
+position = Vector2(1000, 534)
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
