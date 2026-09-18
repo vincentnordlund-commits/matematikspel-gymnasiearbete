@@ -64,10 +64,10 @@ script = ExtResource("2_5ogh5")
 
 [node name="Spel 1" type="TextureButton" parent="." unique_id=1261577175]
 layout_mode = 0
-offset_left = 550.0
-offset_top = 500.0
-offset_right = 678.0
-offset_bottom = 628.0
+offset_left = 544.0
+offset_top = 480.0
+offset_right = 672.0
+offset_bottom = 608.0
 texture_normal = ExtResource("2_r48yj")
 
 [node name="Spel 3" type="TextureButton" parent="Spel 1" unique_id=1066499083]
@@ -90,20 +90,20 @@ texture_normal = ExtResource("2_r48yj")
 
 [node name="Spel 2" type="TextureButton" parent="." unique_id=286185106]
 layout_mode = 0
-offset_left = 1180.0
-offset_top = 500.0
-offset_right = 1308.0
-offset_bottom = 628.0
+offset_left = 1248.0
+offset_top = 480.0
+offset_right = 1376.0
+offset_bottom = 608.0
 texture_normal = ExtResource("2_r48yj")
 
 [node name="Label" type="Label" parent="." unique_id=447723307]
 layout_mode = 0
-offset_left = 572.0
-offset_top = 136.0
-offset_right = 1314.0
-offset_bottom = 341.0
+offset_left = 208.0
+offset_top = 88.0
+offset_right = 1720.0
+offset_bottom = 293.0
 theme_override_font_sizes/font_size = 150
-text = "Sigma boy"
+text = "Big dawg math game"
 
 [connection signal="pressed" from="Spel 1" to="." method="_on_spel_1_pressed"]
 [connection signal="pressed" from="Spel 1/Spel 3" to="." method="_on_spel_3_pressed"]
