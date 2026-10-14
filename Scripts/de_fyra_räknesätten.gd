@@ -24,9 +24,9 @@ func _ready() -> void:
 func _random_fråga() -> void:
 	var choices: Array[Callable] = [
 		addition,
+		division,
 		subtraktion,
-		multiplikation,
-		division
+		multiplikation
 	]
 	
 	var chosen_function: Callable = choices.pick_random()
