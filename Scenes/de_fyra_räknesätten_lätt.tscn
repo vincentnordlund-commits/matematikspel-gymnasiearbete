@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cyslilxhwbptr" path="res://Scripts/de_fyra_räknesätten.gd" id="1_chayn"]
 [ext_resource type="PackedScene" uid="uid://ddtfvmwld55n8" path="res://Scenes/felsvar.tscn" id="2_cu1uc"]
+[ext_resource type="Texture2D" uid="uid://ca2dnwjw8aj28" path="res://Assets/icon.svg" id="2_vxxdi"]
 [ext_resource type="PackedScene" uid="uid://uyw75xsixexp" path="res://Scenes/FX/rättsvar.tscn" id="3_vxxdi"]
 
 [node name="De Fyra Räknesätten Lätt" type="Control" unique_id=778268852]
@@ -29,6 +30,16 @@ offset_left = 667.0
 offset_top = 678.0
 offset_right = 1335.88
 offset_bottom = 810.68
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=808962632]
+layout_mode = 0
+offset_left = 1801.0
+offset_top = 158.0
+offset_right = 1841.0
+offset_bottom = 861.0
+max_value = 10.0
+fill_mode = 3
+texture_progress = ExtResource("2_vxxdi")
 
 [node name="FX" type="Node" parent="." unique_id=1671043367]
 

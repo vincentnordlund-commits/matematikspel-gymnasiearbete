@@ -4,6 +4,7 @@ extends Control
 @onready var line_edit: LineEdit = $LineEdit
 @onready var rättsvar: Sprite2D = $FX/Rättsvar
 @onready var felsvar: Sprite2D = $FX/felsvar
+@onready var progress_bar: TextureProgressBar = $TextureProgressBar
 
 
 var rng = RandomNumberGenerator.new()
@@ -12,6 +13,7 @@ var fråga: int
 
 var number1: int
 var number2: int
+var frågor_klarade: int
 
 func _ready() -> void:
 	
@@ -21,7 +23,9 @@ func _ready() -> void:
 
 func _random_fråga() -> void:
 	var choices: Array[Callable] = [
-
+		addition,
+		subtraktion,
+		multiplikation,
 		division
 	]
 	
@@ -105,6 +109,12 @@ func _on_line_edit_text_submitted(answer: String) -> void:
 		else:
 			print("Wrong")
 			felsvar.playFXfel()
+	
+	frågor_klarade += 1
+	progress_bar.value = int(frågor_klarade)
+	
+	if int(frågor_klarade) == 10:
+		get_tree().change_scene_to_file("res://Scenes/start.tscn")
 	
 
 	line_edit.clear()

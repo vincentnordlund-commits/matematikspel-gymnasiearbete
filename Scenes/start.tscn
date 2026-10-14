@@ -70,7 +70,7 @@ offset_right = 678.0
 offset_bottom = 628.0
 texture_normal = ExtResource("2_r48yj")
 
-[node name="Spel 3" type="TextureButton" parent="Spel 1" unique_id=1066499083]
+[node name="Fyra_Mellan" type="TextureButton" parent="Spel 1" unique_id=1066499083]
 visible = false
 layout_mode = 0
 offset_left = -8.0
@@ -79,7 +79,7 @@ offset_right = 120.0
 offset_bottom = 298.0
 texture_normal = ExtResource("2_r48yj")
 
-[node name="Spel 4" type="TextureButton" parent="Spel 1" unique_id=164827259]
+[node name="Fyra_Svår" type="TextureButton" parent="Spel 1" unique_id=164827259]
 visible = false
 layout_mode = 0
 offset_left = -10.0
@@ -96,6 +96,23 @@ offset_right = 1308.0
 offset_bottom = 628.0
 texture_normal = ExtResource("2_r48yj")
 
+[node name="Enheter_Mellan" type="TextureButton" parent="Spel 2" unique_id=719755183]
+visible = false
+layout_mode = 0
+offset_left = -2.0
+offset_top = 304.0
+offset_right = 126.0
+offset_bottom = 432.0
+texture_normal = ExtResource("2_r48yj")
+
+[node name="Enheter_Svår" type="TextureButton" parent="Spel 2" unique_id=25126684]
+visible = false
+layout_mode = 0
+offset_top = 152.0
+offset_right = 128.0
+offset_bottom = 280.0
+texture_normal = ExtResource("2_r48yj")
+
 [node name="Label" type="Label" parent="." unique_id=447723307]
 layout_mode = 0
 offset_left = 572.0
@@ -103,7 +120,10 @@ offset_top = 136.0
 offset_right = 1314.0
 offset_bottom = 341.0
 theme_override_font_sizes/font_size = 150
-text = "Sigma boy"
+text = "Mattespel"
 
 [connection signal="pressed" from="Spel 1" to="." method="_on_spel_1_pressed"]
-[connection signal="pressed" from="Spel 1/Spel 3" to="." method="_on_spel_3_pressed"]
+[connection signal="pressed" from="Spel 1/Fyra_Mellan" to="." method="_on_fyra_mellan_pressed"]
+[connection signal="pressed" from="Spel 1/Fyra_Mellan" to="." method="_on_spel_3_pressed"]
+[connection signal="pressed" from="Spel 2" to="." method="_on_spel_2_pressed"]
+[connection signal="pressed" from="Spel 2/Enheter_Mellan" to="." method="_on_enheter_mellan_pressed"]
