@@ -22,7 +22,3 @@ func _on_spel_2_pressed() -> void:
 
 func _on_fyra_mellan_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/de_fyra_räknesätten_lätt.tscn")
-
-
-func _on_enheter_mellan_pressed() -> void:
-	get_tree().change_scene_to_file()
