@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dqjvpb1u0lugl" path="res://Scripts/start.gd" id="1_3bxa3"]
 [ext_resource type="Script" uid="uid://c3g6va6c72pwl" path="res://Scenes/color_rect.gd" id="2_5ogh5"]
 [ext_resource type="Texture2D" uid="uid://ca2dnwjw8aj28" path="res://Assets/icon.svg" id="2_r48yj"]
+[ext_resource type="Texture2D" uid="uid://pwx2o5cfi0jk" path="res://Assets/pixil-frame-0 2.png" id="3_rk01k"]
+[ext_resource type="Texture2D" uid="uid://sij7vh0n8yyp" path="res://Assets/pixil-frame-0.png" id="4_o3wvq"]
 
 [sub_resource type="Animation" id="Animation_r48yj"]
 length = 0.001
@@ -64,29 +66,38 @@ script = ExtResource("2_5ogh5")
 
 [node name="Spel 1" type="TextureButton" parent="." unique_id=1261577175]
 layout_mode = 0
-offset_left = 544.0
-offset_top = 480.0
-offset_right = 672.0
-offset_bottom = 608.0
-texture_normal = ExtResource("2_r48yj")
+offset_left = 510.0
+offset_top = 518.0
+offset_right = 753.0
+offset_bottom = 627.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(3, 3)
+texture_normal = ExtResource("3_rk01k")
+texture_hover = ExtResource("4_o3wvq")
+stretch_mode = 3
 
-[node name="Fyra_Mellan" type="TextureButton" parent="Spel 1" unique_id=1066499083]
-visible = false
+[node name="Fyra_Mellan" type="TextureButton" parent="Spel 1" unique_id=192504137]
 layout_mode = 0
-offset_left = -8.0
-offset_top = 170.0
-offset_right = 120.0
-offset_bottom = 298.0
-texture_normal = ExtResource("2_r48yj")
+offset_left = -1.5258789e-05
+offset_top = 124.000015
+offset_right = 239.22998
+offset_bottom = 235.00002
+offset_transform_enabled = true
+offset_transform_position = Vector2(69.85, -77.58)
+texture_normal = ExtResource("3_rk01k")
+texture_hover = ExtResource("4_o3wvq")
 
-[node name="Fyra_Svår" type="TextureButton" parent="Spel 1" unique_id=164827259]
-visible = false
-layout_mode = 0
-offset_left = -10.0
-offset_top = 360.0
-offset_right = 118.0
-offset_bottom = 488.0
-texture_normal = ExtResource("2_r48yj")
+[node name="Fyra_Svår" type="TextureButton" parent="Spel 1" unique_id=1958101412]
+layout_mode = 1
+offset_left = -6.0
+offset_top = 246.0
+offset_right = 237.0
+offset_bottom = 355.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -163.77)
+texture_normal = ExtResource("3_rk01k")
+texture_hover = ExtResource("4_o3wvq")
+stretch_mode = 5
 
 [node name="Spel 2" type="TextureButton" parent="." unique_id=286185106]
 layout_mode = 0
@@ -97,7 +108,6 @@ offset_bottom = 628.0
 texture_normal = ExtResource("2_r48yj")
 
 [node name="Enheter_Mellan" type="TextureButton" parent="Spel 2" unique_id=719755183]
-visible = false
 layout_mode = 0
 offset_left = -2.0
 offset_top = 304.0
@@ -106,7 +116,6 @@ offset_bottom = 432.0
 texture_normal = ExtResource("2_r48yj")
 
 [node name="Enheter_Svår" type="TextureButton" parent="Spel 2" unique_id=25126684]
-visible = false
 layout_mode = 0
 offset_top = 152.0
 offset_right = 128.0
@@ -120,12 +129,9 @@ offset_top = 88.0
 offset_right = 1720.0
 offset_bottom = 293.0
 theme_override_font_sizes/font_size = 150
-
 text = "Big dawg math game"
-
 
 [connection signal="pressed" from="Spel 1" to="." method="_on_spel_1_pressed"]
 [connection signal="pressed" from="Spel 1/Fyra_Mellan" to="." method="_on_fyra_mellan_pressed"]
-[connection signal="pressed" from="Spel 1/Fyra_Mellan" to="." method="_on_spel_3_pressed"]
 [connection signal="pressed" from="Spel 2" to="." method="_on_spel_2_pressed"]
 [connection signal="pressed" from="Spel 2/Enheter_Mellan" to="." method="_on_enheter_mellan_pressed"]

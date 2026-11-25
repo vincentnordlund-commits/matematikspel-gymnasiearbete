@@ -6,7 +6,6 @@ extends Control
 @onready var felsvar: Sprite2D = $FX/felsvar
 @onready var progress_bar: TextureProgressBar = $TextureProgressBar
 
-
 var rng = RandomNumberGenerator.new()
 
 var fråga: int
